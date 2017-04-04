@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 20px;
+            padding: 5px;
+            border: 5px solid grey;
+        }
+        
+        h1 {
+            font-size: 1em;
+        }
+        
+        #nav {
+            float: right;
+            width: 30%;
+        }
+        
+        #main-body img {
+            float: left;
+            width: 300px;
+            margin-right: 20px;
+        }
+        
+        @media screen and (min-width: 1025px) {
+            h1 {
+                font-size: 2.4em;
+            }
+            h1:after {
+                content: " - Larger Screen";
+            }
+            #main-body img {
+                width: 400px;
+            }
+        }
+        
+        @media screen and (max-width: 765px) {
+            body {
+                color: White;
+                background-color: Black;
+                font-family: Verdana, Helvetica, Sans-Serif;
+                font-size: .8em;
+            }
+            h1 {
+                font-size: 1.3em;
+            }
+            h1:after {
+                content: " - Smaller Screen";
+            }
+            #nav {
+                float: none;
+                width: auto;
+            }
+            #main-body img {
+                width: 200px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>Media queries</h1>
+
+    </div>
+    <div id="nav">
+        <nav>
+            <ul>
+                <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a>
+                </li>
+                <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
+                </li>
+                <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a>
+                </li>
+                <li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
+                </li>
+                <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="main-body">
+        <img src="http://tiger.towson.edu/~awiecz1/Term%20Project%20Webpage/happy-dog.jpg" />
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
+            est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci,
+            sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt
+            quis, accumsan porttitor, facilisis luctus, metus</p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
+            est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci,
+            sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt
+            quis, accumsan porttitor, facilisis luctus, metus</p>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
+            est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci,
+            sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt
+            quis, accumsan porttitor, facilisis luctus, metus</p>
+    </div>
+    <div id="footer">Footer</div>
+</body>
+
+</html>

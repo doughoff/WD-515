@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        @media all {
+            #showMediaQueryData span:after {
+                content: "All media";
+            }
+        }
+        
+        @media screen {
+            #showMediaQueryData span:after {
+                content: "Screen media";
+            }
+        }
+        
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+            #showMediaQueryData span:after {
+                content: " Smartphone - portrait & landscape";
+            }
+        }
+        
+        @media only screen and (min-width: 321px) {
+            #showMediaQueryData span:after {
+                content: " Smartphone - landscape";
+            }
+        }
+        
+        @media only screen and (max-width: 320px) {
+            #showMediaQueryData span:after {
+                content: " Smartphone - portrait";
+            }
+        }
+        
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+            #showMediaQueryData span:after {
+                content: " iPad - portrait & landscape ";
+            }
+        }
+        
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+            #showMediaQueryData span:after {
+                content: " iPad - landscape ";
+            }
+        }
+        
+        @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+            #showMediaQueryData span:after {
+                content: " iPad - portrait ";
+            }
+        }
+        
+        @media only screen and (min-width: 1224px) {
+            #showMediaQueryData span:after {
+                content: " Desktops & laptops ";
+            }
+        }
+        
+        @media only screen and (min-width: 1824px) {
+            #showMediaQueryData span:after {
+                content: " Large screens ";
+            }
+        }
+        
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min-device-pixel-ratio: 1.5) {
+            #showMediaQueryData span:after {
+                content: "iPhone 4 and high pixel ratio devices";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="showMediaQueryData">
+        <span>The following media query was matched:<br /></span>
+    </div>
+</body>
+
+</html>

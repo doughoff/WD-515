@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: hsl(180, 100%, 90%);
+            padding: 1%;
+        }
+        
+        #main {
+            float: left;
+            width: 60%;
+            margin: 0 2%;
+            padding: 2%;
+            background-color: hsl(200, 100%, 90%);
+        }
+        
+        aside {
+            float: left;
+            width: 25%;
+            margin: 0 2% 0 0;
+            padding: 2%;
+            background-color: hsl(220, 100%, 90%);
+        }
+        
+        footer {
+            clear: left;
+            background-color: hsl(240, 100%, 90%);
+        }
+        
+        @media screen and (max-width: 600px) {
+            #main {
+                float: none;
+                width: 95%;
+            }
+            aside {
+                float: none;
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Two-column fluid Template</h1>
+        <p>This is the masthead information</p>
+    </header>
+
+    <div id='main'>
+        <h2>Main section</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <aside>
+        <h2>Aside</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </aside>
+
+    <footer>
+        <p>Footer here.</p>
+    </footer>
+</body>
+
+</html>

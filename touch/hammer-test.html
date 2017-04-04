@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* http: //code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css */
+    </style>
+    <script>
+        // load jQuery https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js
+        // load jQuery Mobile https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js
+        // load Hammer.js https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js
+
+        function swipeOpen(event) {
+            $('#footer').html('Open fired');
+            $('#swipepanel').panel('open');
+        }
+
+        function swipeClose(event) {
+            $('#footer').html('Close fired');
+            $('#swipepanel').panel('close');
+        }
+
+        // Attach events
+        var hammerMain = new Hammer(document.getElementById('main')),
+            hammerPanel = new Hammer(document.getElementById('swipepanel'));
+        hammerMain.on('swiperight', swipeOpen);
+        hammerMain.on('swipeleft', swipeClose);
+        hammerPanel.on('swipeleft', swipeClose);
+    </script>
+</head>
+
+<body>
+    <div id="page-container">
+        <section data-role="page">
+            <div data-role="panel" id="swipepanel">Vivamus quis urna vehicula, tincidunt nisl ut, molestie lectus. Sed ultrices vehicula efficitur. Maecenas a ante neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla aliquet, felis quis scelerisque
+                euismod, diam lacus pretium nisl, et volutpat tellus sem at ipsum. In hac habitasse platea dictumst. Maecenas ultricies pellentesque metus eu porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                egestas.
+            </div>
+            <header data-role="header">
+                <h1>Hammer.js panel test</h1>
+
+            </header>
+            <div id="main" data-role="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada ante ut arcu condimentum pulvinar. Nulla at ipsum libero. Duis bibendum ultrices turpis, non vulputate magna congue vel. Fusce id fermentum urna, congue tincidunt nisl.
+                Suspendisse vestibulum volutpat congue. Praesent non quam vitae augue sagittis egestas eu at ex. Curabitur ac pharetra dui. Etiam magna mi, tristique id neque sed, iaculis volutpat elit.
+                <br />
+                <br />Cras venenatis commodo augue. Aliquam suscipit nulla eu mollis blandit. Suspendisse sem diam, suscipit et ullamcorper in, egestas eu nunc. Nunc diam lectus, sollicitudin quis risus non, fringilla semper diam. Fusce imperdiet dui
+                sem, a pellentesque ipsum tristique consequat. Phasellus urna diam, molestie nec ornare at, tempor sit amet libero. Fusce ultricies aliquam nunc a aliquet. Mauris vel erat arcu. Phasellus sit amet viverra augue. Nulla imperdiet lacus odio,
+                eget aliquet nisl fringilla id.
+                <br />
+                <br />Suspendisse in pulvinar elit, id imperdiet nunc. Sed maximus augue velit, id rhoncus nisi posuere quis. Donec vestibulum dapibus eros. Pellentesque ligula sapien, tempor id lectus non, scelerisque posuere ipsum. Morbi non consequat
+                urna. Vestibulum nec eros vitae justo volutpat porttitor ut quis arcu. Nulla id aliquam nulla. Nullam euismod justo justo, ut pellentesque mi aliquam eu. Nulla vel orci nec dolor dignissim molestie ultricies ut odio.
+                <br />
+                <br />Quisque id nisl et lorem faucibus gravida. Donec mollis eros a lorem rhoncus rutrum. Nunc pharetra libero ac magna pulvinar scelerisque. Aliquam sed nisl congue, placerat tortor ut, dignissim nulla. Praesent dolor sapien, laoreet
+                vitae tincidunt quis, tincidunt id justo. Vestibulum viverra dui ac volutpat scelerisque. Mauris eu mi id nulla scelerisque ornare at id purus. Morbi tincidunt ligula turpis, a fermentum sapien pretium id. Phasellus rutrum sit amet dui
+                vitae porta.
+                <br />
+                <br />
+                <a href="#swipepanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Panel</a>
+
+            </div>
+            <footer data-role="footer">
+                <h2 id="footer">End test</h2>
+
+            </footer>
+        </section>
+    </div>
+</body>
+
+</html>
