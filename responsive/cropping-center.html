@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .bg-image {
+            /* image specified in separate class below */
+            height: 240px;
+            width: 100%;
+        }
+        
+        .bg-image-club {
+            background-image: url(http://4.bp.blogspot.com/-xWge_oWwlCc/T90R1rAQOBI/AAAAAAAAAys/RtM3FigIeB0/s1600/original-mickey-mouse-club-too.jpg);
+            /* lt ie8 */
+            -ms-background-position-x: center;
+            -ms-background-position-y: center;
+            background-position: center center;
+            /* scale bg image proportionately */
+            background-size: cover;
+            /* ie8 workaround  */
+            -ms-behavior: url(https://github.com/downloads/louisremi/background-size-polyfill/backgroundsize.min.htc);
+            /* prevent scaling past src width (or not) */
+            /* max-width: 1200px; */
+        }
+        /* example media queries */
+        
+        @media only screen and (min-width: 768px) {
+            .bg-image {
+                height: 320px;
+            }
+        }
+        
+        @media only screen and (min-width: 1200px) {
+            .bg-image {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Responsive image 1</h1>
+
+    <figure>
+        <div class="bg-image bg-image-club"></div>
+        <figcaption>Walt is in the center
+            <br/><code>background-position: center center</code>.</figcaption>
+    </figure>
+    <a href='http://jsfiddle.net/doughoff/8QAMn/' target='_blank'> Cropping demo 3</a>
+</body>
+
+</html>

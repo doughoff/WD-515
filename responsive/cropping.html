@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .crop-height {
+            /* max-width: 1200px; /* native or declared width of img src (if known) */
+            max-height: 320px;
+            overflow: hidden;
+        }
+        
+        img.scale {
+            /* corrects small inline gap at bottom of containing div */
+            display: block;
+            max-width: 100%;
+            /* just in case, to force correct aspect ratio */
+            height: auto !important;
+            width: auto\9;
+            /* ie8+9 */
+            /* lt ie8 */
+            -ms-interpolation-mode: bicubic;
+            /* optionally force a minimum size if img src size is known: */
+            /* min-height: 320px; /* max-height of .crop-height */
+            /* min-width: 480px; /* proportional to above */
+        }
+        
+        .flip {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+            /* needed? not sure */
+            zoom: 1;
+        }
+        
+        img.flip {
+            /* actually, aligns left within .cropheight */
+            float: right;
+            /* clearfix after? */
+        }
+        /* presentational CSS below */
+        
+        .page-wrap {
+            padding: .5em 2em 2em;
+        }
+        
+        h2 {
+            margin-top: -.5em;
+            font-style: italic;
+        }
+        
+        figure {
+            margin: 2em 0;
+        }
+        
+        figcaption {
+            margin: .5em 0;
+            font-size: 85%;
+            font-style: italic;
+            color: #888;
+        }
+        
+        code {
+            background: #e3e3e3;
+            padding: 0 .25em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrap">
+
+        <h1>Responsive Cropping</h1>
+
+        <figure>
+            <div class="crop-height">
+                <img class="scale" src="http://www.phil-sears.com/Folder%202/IMG_0007_4.jpg" alt="Mickey Mouse Club" />
+            </div>
+            <!-- end .crop-height -->
+            <figcaption>
+                This crops from the bottom. When you resize past 700px, the bottom disappears.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <div class="crop-height flip">
+                <img class="scale flip" src="http://www.phil-sears.com/Folder%202/IMG_0007_4.jpg" alt="Mickey Mouse Club" />
+            </div>
+            <!-- end .crop-height -->
+            <figcaption>
+                This crops from the top (unless you're using IE8 or lower.)
+            </figcaption>
+        </figure>
+
+    </div>
+    <!-- end .page-wrap -->
+    <a href='http://jsfiddle.net/doughoff/fdXDR/' target='_blank'> Cropping demo 4</a>
+</body>
+
+</html>
