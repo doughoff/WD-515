@@ -4,104 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Media Queries</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="../css/wd-400.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <style>
-        div {
-            margin: 20px;
-            padding: 5px;
-            border: 5px solid grey;
-        }
-        
-        h1 {
-            font-size: 1em;
-        }
-        
-        #nav {
-            float: right;
-            width: 30%;
-        }
-        
-        #main-body img {
-            float: left;
-            width: 300px;
-            margin-right: 20px;
-        }
-        
-        @media screen and (min-width: 1025px) {
-            h1 {
-                font-size: 2.4em;
+        /* Base styles - mobile first*/
+
+        @media screen {
+            #media-type:after {
+                content: " Smartphone - small";
             }
-            h1:after {
-                content: " - Larger Screen";
+            img {
+                max-width: 50%;
+                float: right;
+                clear: right;
+                margin-left: 1rem;
             }
-            #main-body img {
-                width: 400px;
-            }
-        }
-        
-        @media screen and (max-width: 765px) {
             body {
-                color: White;
-                background-color: Black;
-                font-family: Verdana, Helvetica, Sans-Serif;
-                font-size: .8em;
+                font-size: 1.1rem;
+                line-height: 1.7;
             }
-            h1 {
-                font-size: 1.3em;
+            nav {
+                float: right;
+                clear: right;
+                margin-left: 1rem;
             }
-            h1:after {
-                content: " - Smaller Screen";
+            h1,h2,h3,h4,h5,h6 {
+                line-height: 1.2;
             }
-            #nav {
-                float: none;
-                width: auto;
+        }
+        /* Break points 375px, 425px, 760px, 1024px, 1820px */
+
+        @media screen and (min-width: 375px) {
+            #media-type:after {
+                content: " Smartphone - medium";
             }
-            #main-body img {
-                width: 200px;
-                margin-right: 10px;
+            html {
+                background-color: hsl(130, 50%, 95%);
+            }
+        }
+
+        @media screen and (min-width: 425px) {
+            #media-type:after {
+                content: " Smartphone - large";
+            }
+            html {
+                background-color: hsl(130, 50%, 90%);
+            }
+        }
+
+        @media screen and (min-width: 760px) {
+            #media-type:after {
+                content: "Tablets";
+            }
+            html {
+                background-color: hsl(130, 50%, 85%);
+            }
+        }
+
+        @media screen and (min-width: 1024px) {
+            #media-type:after {
+                content: " Desktops and laptops";
+            }
+            html {
+                background-color: hsl(130, 50%, 80%);
+            }
+            img {
+                max-width: 40%;
+            }
+        }
+
+        @media screen and (min-width: 1820px) {
+            #media-type:after {
+                content: " Large screens ";
+            }
+            html {
+                background-color: hsl(130, 50%, 75%);
+            }
+        }
+
+        @media print {
+            #media-type:after {
+                content: "Printer";
+            }
+            img {
+                display: none;
             }
         }
     </style>
 </head>
 
 <body>
-    <div id="header">
-        <h1>Media queries</h1>
-
+    <nav>
+        <a href="../index.html">
+            <i class="fa fa-home fa-2x" style='color:red'></i>
+        </a>
+    </nav>
+    <h1>Media Queries for <span id="media-type"></span></h1>
+    <div>
+        <img src="https://yt3.ggpht.com/-V92UP8yaNyQ/AAAAAAAAAAI/AAAAAAAAAAA/zOYDMx8Qk3c/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Grumpy Cat">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorum sed inventore consectetur, voluptatum voluptas
+            labore magni corporis voluptatibus ut iste, voluptatem molestias nobis, pariatur expedita praesentium laudantium.
+            Autem, voluptates!</p>
+        <p>
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium odit dolor repellendus est asperiores adipisci assumenda! Beatae, quibusdam nisi! Fugit impedit quia repellat in quidem dolorum, laborum facere esse excepturi!</span>
+            <span>Illo ullam voluptatum perferendis accusamus delectus, enim, laudantium quisquam earum ex nobis facere sint quis, ad iure odit repellat numquam eligendi quaerat non quibusdam minima sapiente molestias. Qui, debitis quia.</span>
+            <span>Neque ratione, officiis debitis id saepe aut rem, aliquam, dicta eligendi vero dignissimos ea odit praesentium maxime alias molestias tempora. Facilis est ullam dignissimos in iusto ratione nobis fugiat praesentium!</span>
+        </p>
+        <p>Debitis voluptate, nihil cum veniam necessitatibus asperiores suscipit! Dicta ex iste voluptatum, maiores commodi
+            possimus recusandae quas molestias, ullam eaque est, a temporibus voluptatibus ratione quia, amet minima quo
+            vel!
+        </p>
+        <p>
+            <span>Dicta commodi officiis sunt blanditiis doloribus ullam exercitationem voluptas voluptatibus obcaecati atque? Quidem inventore aspernatur pariatur, asperiores itaque exercitationem eum, soluta optio repellendus nulla ullam ipsa! Cumque vero nobis illum.</span>
+            <span>Excepturi reiciendis eaque quasi corrupti ex aut maiores, commodi quidem incidunt dolores debitis iure? Magnam animi et ipsam soluta commodi vero, non, repudiandae quam laborum obcaecati dicta facere nobis ullam?</span>
+            <span>Provident, minima autem neque porro asperiores at nam fugiat sequi, odio sapiente ipsum pariatur maxime tempora animi perferendis blanditiis voluptatem deserunt tempore voluptate? Sed a, eligendi perspiciatis accusamus veritatis dolore.</span>
+        </p>
+        <p>
+            <span>Nihil aliquam error consequuntur, expedita vel eligendi nostrum quam cum autem consequatur facilis asperiores laborum delectus amet quos recusandae culpa ipsa at facere, possimus soluta distinctio? Beatae ab repellendus autem.</span>
+            <span>Quam dicta aliquid error obcaecati totam facilis, deleniti quisquam nam cum! Suscipit quidem, voluptas provident vero facilis aspernatur. In velit alias amet officia dolor nihil blanditiis quibusdam quas quis iusto?</span>
+            <span>Architecto pariatur quibusdam perferendis? Reiciendis, ipsum laboriosam. Exercitationem laborum odio iusto iure inventore dolorum placeat omnis error dicta porro nesciunt veritatis, neque consequatur iste temporibus aperiam repellendus. Non, eaque natus?</span>
+        </p>
+        <p>Illo temporibus voluptates provident dicta amet, itaque vel aut laborum sit necessitatibus repellendus eaque adipisci.
+            Repellat quae, laboriosam magnam aliquid magni porro atque, debitis quos, blanditiis tempora ipsam natus doloribus.</p>
     </div>
-    <div id="nav">
-        <nav>
-            <ul>
-                <li><a href="#nowhere" title="Lorum ipsum dolor sit amet">Lorem</a>
-                </li>
-                <li><a href="#nowhere" title="Aliquam tincidunt mauris eu risus">Aliquam</a>
-                </li>
-                <li><a href="#nowhere" title="Morbi in sem quis dui placerat ornare">Morbi</a>
-                </li>
-                <li><a href="#nowhere" title="Praesent dapibus, neque id cursus faucibus">Praesent</a>
-                </li>
-                <li><a href="#nowhere" title="Pellentesque fermentum dolor">Pellentesque</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-    <div id="main-body">
-        <img src="http://tiger.towson.edu/~awiecz1/Term%20Project%20Webpage/happy-dog.jpg" />
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
-            est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci,
-            sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt
-            quis, accumsan porttitor, facilisis luctus, metus</p>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
-            est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci,
-            sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt
-            quis, accumsan porttitor, facilisis luctus, metus</p>
-        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae
-            est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci,
-            sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt
-            quis, accumsan porttitor, facilisis luctus, metus</p>
-    </div>
-    <div id="footer">Footer</div>
 </body>
 
 </html>

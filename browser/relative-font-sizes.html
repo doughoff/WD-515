@@ -65,73 +65,30 @@
     <!-- Stylesheets =====================================================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../css/wd-515.css">
-    <style>
-        /* Base styles - mobile first*/
 
-        @media screen {
-            #media-type:after {
-                content: " Smartphone - small";
-            }
-        }
-        /* Break points 375px, 425px, 760px, 1024px, 1820px */
-
-        @media screen and (min-width: 375px) {
-            #media-type:after {
-                content: " Smartphone - medium";
-            }
-            html {
-                background-color: hsl(130, 50%, 95%);
-            }
-        }
-
-        @media screen and (min-width: 425px) {
-            #media-type:after {
-                content: " Smartphone - large";
-            }
-            html {
-                background-color: hsl(130, 50%, 90%);
-            }
-        }
-
-        @media screen and (min-width: 760px) {
-            #media-type:after {
-                content: "Tablets";
-            }
-            html {
-                background-color: hsl(130, 50%, 85%);
-            }
-        }
-
-        @media screen and (min-width: 1024px) {
-            #media-type:after {
-                content: " Desktops and laptops";
-            }
-            html {
-                background-color: hsl(130, 50%, 80%);
-            }
-        }
-
-        @media screen and (min-width: 1820px) {
-            #media-type:after {
-                content: " Large screens ";
-            }
-            html {
-                background-color: hsl(130, 50%, 75%);
-            }
-        }
-    </style>
     <!-- JavaScript =====================================================================-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <title>Media Query Detection</title>
+    <title>Relative Font Sizes</title>
 </head>
 
 <body>
-    <h1>Media Query Detection</h1>
-    <div>
-        <h2>The following media query was matched:</h2>
-        <span id='media-type'></span>
+    <h1>Relative Font Sizes</h1>
+    <p>This is 16 pixels high by default.</p>
+    <p style='font-size: 16pt'>This is 16 points high. Points are used for print output not screen. How high in pixels is it?</p>
+    <div style='font-size:2em'>
+        How high is this at 2em?
+        <div style='font-size:2em'>
+            How high is this now at 2em?
+        </div>
     </div>
+    <div style='font-size:2rem'>
+        How high is this at 2rem?
+        <div style='font-size:2rem'>
+            How high is this now at 2rem?
+        </div>
+    </div>
+
 </body>
 
 </html>

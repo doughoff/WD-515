@@ -65,73 +65,29 @@
     <!-- Stylesheets =====================================================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../css/wd-515.css">
-    <style>
-        /* Base styles - mobile first*/
 
-        @media screen {
-            #media-type:after {
-                content: " Smartphone - small";
-            }
-        }
-        /* Break points 375px, 425px, 760px, 1024px, 1820px */
-
-        @media screen and (min-width: 375px) {
-            #media-type:after {
-                content: " Smartphone - medium";
-            }
-            html {
-                background-color: hsl(130, 50%, 95%);
-            }
-        }
-
-        @media screen and (min-width: 425px) {
-            #media-type:after {
-                content: " Smartphone - large";
-            }
-            html {
-                background-color: hsl(130, 50%, 90%);
-            }
-        }
-
-        @media screen and (min-width: 760px) {
-            #media-type:after {
-                content: "Tablets";
-            }
-            html {
-                background-color: hsl(130, 50%, 85%);
-            }
-        }
-
-        @media screen and (min-width: 1024px) {
-            #media-type:after {
-                content: " Desktops and laptops";
-            }
-            html {
-                background-color: hsl(130, 50%, 80%);
-            }
-        }
-
-        @media screen and (min-width: 1820px) {
-            #media-type:after {
-                content: " Large screens ";
-            }
-            html {
-                background-color: hsl(130, 50%, 75%);
-            }
-        }
-    </style>
     <!-- JavaScript =====================================================================-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <title>Media Query Detection</title>
+    <title>Inspect User Agent</title>
 </head>
 
 <body>
-    <h1>Media Query Detection</h1>
-    <div>
-        <h2>The following media query was matched:</h2>
-        <span id='media-type'></span>
-    </div>
+    <h1>Inspect User Agent</h1>
+    <p>Your user agent is <span id='user-agent'></span>.</p>
+    <p>Visit <a href="http://www.useragentstring.com">UserAgentString.com</a> to see this browser's string and look up info
+        on others.</p>
+    <h2>Other user agent strings</h2>
+    <ul>
+        <li>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.162 Safari/535.19</li>
+        <li>Mozilla/5.0 (iPad; CPU OS 5_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Mobile/9B176</li>
+        <li>Mozilla/5.0 (Linux; U; Android 2.2.3; en-us; Droid Build/FRK76) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0
+            Mobile Safari/533.1</li>
+    </ul>
+    <script>
+        console.log('User agent string:\n',navigator.userAgent);
+        $('#user-agent').html('<b>' + navigator.userAgent + '</b>');
+    </script>
 </body>
 
 </html>

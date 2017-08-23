@@ -3,3 +3,14 @@ WD-515.css
 Doug Hoff
 Aug 2017
 */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+html {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 1rem;
+}
+
+h1 {
+    font-size: 3em;
+    color: #7EABD8
+}
