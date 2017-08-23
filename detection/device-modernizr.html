@@ -65,7 +65,17 @@
     <!-- Stylesheets =====================================================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../css/wd-515.css">
+    <style>
+        .touch .touch-stuff,
+        .no-touch .non-touch-stuff {
+            display: block;
+        }
 
+        .no-touch .touch-stuff,
+        .touch .non-touch-stuff {
+            display: none;
+        }
+    </style>
     <!-- JavaScript =====================================================================-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -78,6 +88,8 @@
     <h2>
         Device detected: <span id="device"></span>
     </h2>
+    <p class='touch-stuff'>Device is touch aware.</p>
+    <p class='non-touch-stuff'>Device is not touch aware.</p>
     <script>
         function isTouchAware() {
             return Modernizr.touch;

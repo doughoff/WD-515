@@ -41,12 +41,23 @@
     <meta name="msapplication-TileColor" content="#222222">
 
     <!-- Add to homescreen for Chrome on Android -->
-        <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Stylesheets =====================================================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../css/wd-515.css">
 
+    <style>
+        @media print {
+            a[href]:after {
+                content: " (" attr(href) ")";
+            }
+
+            abbr[title]:after {
+                content: " (" attr(title) ")";
+            }
+        }
+    </style>
     <!-- JavaScript =====================================================================-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -54,8 +65,8 @@
 </head>
 
 <body>
-    <h1>WD-515 Mobile Web App Development</h1>
-
+    <h1>WD-515</h1>
+    <p><abbr title="Mobile Web App Development">MWAD</abbr></p>
     <h2>Browser</h2>
     <ul>
         <li><a href="browser/dimensions.html">Dimensions</a></li>
