@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <style>
         .crop-height {
             /* max-width: 1200px; /* native or declared width of img src (if known) */
             max-height: 320px;
             overflow: hidden;
         }
-        
+
         img.scale {
             /* corrects small inline gap at bottom of containing div */
             display: block;
@@ -27,7 +26,7 @@
             /* min-height: 320px; /* max-height of .crop-height */
             /* min-width: 480px; /* proportional to above */
         }
-        
+
         .flip {
             -webkit-transform: rotate(180deg);
             -moz-transform: rotate(180deg);
@@ -37,39 +36,41 @@
             /* needed? not sure */
             zoom: 1;
         }
-        
+
         img.flip {
             /* actually, aligns left within .cropheight */
             float: right;
             /* clearfix after? */
         }
         /* presentational CSS below */
-        
+
         .page-wrap {
             padding: .5em 2em 2em;
         }
-        
+
         h2 {
             margin-top: -.5em;
             font-style: italic;
         }
-        
+
         figure {
             margin: 2em 0;
         }
-        
+
         figcaption {
             margin: .5em 0;
             font-size: 85%;
             font-style: italic;
             color: #888;
         }
-        
+
         code {
             background: #e3e3e3;
             padding: 0 .25em;
         }
     </style>
+    <title>Responsive Cropping</title>
+
 </head>
 
 <body>
@@ -99,7 +100,6 @@
 
     </div>
     <!-- end .page-wrap -->
-    <a href='http://jsfiddle.net/doughoff/fdXDR/' target='_blank'> Cropping demo 4</a>
 </body>
 
 </html>
