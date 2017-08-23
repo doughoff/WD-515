@@ -31,8 +31,16 @@
                 clear: right;
                 margin-left: 1rem;
             }
-            h1,h2,h3,h4,h5,h6 {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
                 line-height: 1.2;
+            }
+            .multi-column {
+                /* none */
             }
         }
         /* Break points 375px, 425px, 760px, 1024px, 1820px */
@@ -74,6 +82,18 @@
             img {
                 max-width: 40%;
             }
+            .multi-column {
+                -webkit-column-count: 3;
+                -moz-column-count: 3;
+                column-count: 3;
+                -webkit-column-gap: 30px;
+                -moz-column-gap: 30px;
+                column-gap: 30px;
+              }
+              
+            .multi-column p:first-of-type {
+                margin-top: 0;
+            }
         }
 
         @media screen and (min-width: 1820px) {
@@ -103,7 +123,7 @@
         </a>
     </nav>
     <h1>Media Queries for <span id="media-type"></span></h1>
-    <div>
+    <div class='multi-column'>
         <img src="https://yt3.ggpht.com/-V92UP8yaNyQ/AAAAAAAAAAI/AAAAAAAAAAA/zOYDMx8Qk3c/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" alt="Grumpy Cat">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolorum sed inventore consectetur, voluptatum voluptas
             labore magni corporis voluptatibus ut iste, voluptatem molestias nobis, pariatur expedita praesentium laudantium.
