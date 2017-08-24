@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        /* grid definition */
+
+        .grid {
+            display: grid;
+            grid-gap: .5em;
+            grid-template-areas: "header" "nav" "content" "sidebar" "footer"
+        }
+        /* grid template areas */
+
+        .content {
+            grid-area: content;
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        aside {
+            grid-area: sidebar;
+        }
+        /* classes */
+
+        .box {
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 150%;
+        }
+
+        .dark-on-light {
+            background-color: #444;
+            color: #fff
+        }
+
+        .light-on-dark {
+            background-color: #999;
+            color: #444
+        }
+
+        .border-thin {
+            border: 1px grey solid;
+        }
+        /* media queries */
+
+        @media only screen and (min-width: 500px) {
+            h2::after {
+                content: "layout min-width: 500px";
+            }
+            .grid {
+                grid-template-columns: 20% auto;
+                grid-template-areas: "header   header" "nav  content" "sidebar sidebar" "footer   footer";
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            h2::after {
+                content: "layout min-width: 600px";
+            }
+            .grid {
+                grid-gap: 20px;
+                grid-template-columns: 120px auto 120px;
+                grid-template-areas: "header  header  header" "nav content sidebar" "footer  footer  footer";
+                /*max-width: 600px;*/
+            }
+        }
+    </style>
+
+    <script>
+        window.addEventListener("resize", showWindowWidth);
+
+        function showWindowWidth() {
+            var data = document.querySelector('data');
+            data.innerHTML = window.innerWidth + ' px ';
+        }
+    </script>
+
+<title>Grid layout</title>
+
+</head>
+
+<body>
+    <h1>Grid layout adapted from <a href="http://gridbyexample.com/examples/example13/">grid by example</a></h1>
+    <h2>
+        <data></data>
+    </h2>
+    <div class="grid">
+        <div>content outside of the template areas</div>
+        <div>some content outside of the template areas</div>
+        <header class="box dark-on-light">Header</header>
+        <nav class="box light-on-dark">Nav</nav>
+        <aside class="box light-on-dark">Sidebar</aside>
+        <div class="box content border-thin">Content
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, qui ducimus fugiat aperiam magni dolor dolore,
+                quaerat asperiores eveniet aliquam ratione quidem, eos odio. Temporibus molestiae, officia similique omnis
+                aut.</p>
+        </div>
+        <footer class="box dark-on-light">Footer</footer>
+        <div>more content outside of the template areas</div>
+        <div>still more content outside of the template areas</div>
+        <div>even more content outside of the template areas</div>
+    </div>
+</body>
+
+</html>

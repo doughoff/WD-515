@@ -36,7 +36,7 @@ $blue-grey: hsl(200, 18%, 46%);
 
 /*************************** Elements ***********************************/
 
-html {
+html { 
     @extend .roboto;
     margin-left: 1rem;
     font-size: 62.5%; // Mr. Rutter’s magic font-size

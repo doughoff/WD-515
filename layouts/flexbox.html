@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox posts</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        body {
+            font-family: Raleway, Helvetica, sans-serif;
+            line-height: 1.5;
+            max-width: 80%;
+        }
+
+        .icon-color {
+            color: #BCD2DA;
+        }
+
+        .post {
+            /**
+   * Lay out the children of this container with
+   * flexbox, which is horizontal by default.
+   */
+            display: flex;
+        }
+
+        .post-user {
+            /**
+   * The flex property is a short-hand for setting
+   * the flex-grow, flex-shrink, and flex-basis
+   * properties. These properties control how the
+   * element resizes to fill its container.
+   *
+   * The value we're using here is actually the
+   * default, but I'm including so I can explain it
+   * a bit. The default value equates to:
+   *
+   * - flex-grow: 0
+   * - flex-shrink: 1
+   * - flex-basis: auto
+   *
+   * We set flex-grow to 0, so this element won't
+   * expand to fill its container.
+   *
+   * We'll then set flex-shrink to 1 so that the
+   * element will shrink as its container gets
+   * smaller. However, it will only shrink so far
+   * because...
+   *
+   * ...we set flex-basis to auto. This causes
+   * the content's size to also be a factor in the
+   * calculation of the element's size. Because
+   * the width of a child element is set (below),
+   * this element won't shrink below that size.
+   But is also causes the area not to wrap so, it's out. - DH
+   *
+   * The net result is that this element stays a
+   * fixed size, neither expanding nor shrinking.
+   */
+            /* flex: 0 1 auto; */
+            flex: 0 1;
+            padding: 0 1rem .5rem 0;
+        }
+
+        .post-user-portrait {
+            /**
+     * We're using these three flexbox properties
+     * here to center the portrait icon inside of
+     * this element.
+     *
+     * We'll explore these properties in more detail
+     * in the "Stay Centered" section, so I'll only
+     * briefly summarize here:
+     *
+     * - display: flex instructs the browser to
+     *   use flexbox to lay out this element's
+     *   children.
+     * - justify-content: center will center the
+     *   icon along the main axis.
+     * - align-items: center will center the icon
+     *   along the secondary (perpendicular) axis.
+     */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 90px;
+            font-size: 70px;
+            line-height: 0;
+        }
+
+        .post-user-name {
+            color: #57727C;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .post-body {
+            /**
+   * We'll use the short-hand flex property again
+   * here, to make the body of the post expand to
+   * fill the container, and shrink as the container
+   * becomes narrower.
+   *
+   * By setting flex-grow to 1, we cause this
+   * element to expand to fill the container.
+   *
+   * Setting flex-shrink to 1 causes this element
+   * to shrink with the container.
+   *
+   * Last, we set flex-basis to 0 so that its
+   * size is solely determined by the size of
+   * the container. (The default value is auto,
+   * which would cause the content's size to also
+   * be a factor in this calculation.)
+   *
+   * The net result of these properties is that the
+   * element is a fluid size, and will expand and
+   * shrink with its container.
+   *
+   * NOTE: IE11 ignores flex short-hand declarations
+   * with unitless flex-basis values. So we have to
+   * use 0% instead of 0 as a workaround. You can
+   * find more info at:
+   * github.com/philipwalton/flexbugs.
+   */
+            flex: 1 1 0%;
+            position: relative;
+            padding: 15px;
+            margin: 0 0 5px 0;
+            border: 1px solid #CAD0D2;
+            border-radius: 4px;
+        }
+
+        .post-body:after,
+        .post-body:before {
+            right: 100%;
+            top: 35px;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .post-body:after {
+            border-color: transparent;
+            border-right-color: #ffffff;
+            border-width: 8px;
+            margin-top: -8px;
+        }
+
+        .post-body:before {
+            border-color: transparent;
+            border-right-color: #CAD0D2;
+            border-width: 9px;
+            margin-top: -9px;
+        }
+
+        .post-body-content {
+            color: #57727C;
+            font-size: 12px;
+        }
+
+        .post-body-date {
+            margin-top: 5px;
+            color: #86969C;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--http://www.flexboxpatterns.com/post-->
+    <h1>Flexbox posts</h1>
+    <div class="post">
+        <div class="post-user">
+            <div class="post-user-portrait">
+                <span class="icon-color fa fa-user-circle-o"></span>
+            </div>
+            <div class="post-user-name">Sherlyn 1.</div>
+        </div>
+        <div class="post-body">
+            <div class="post-body-content">
+                <b>Far far away</b>, behind the word mountains, far from the countries Vokalia and Consonantia, there live
+                the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
+                ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is
+                a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing
+                has no control about the blind texts it is an almost unorthographic life One day however a small line of
+                blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. </div>
+            <div class="post-body-date">
+                December 4
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <div class="post-user">
+            <div class="post-user-portrait">
+                <span class="icon-color fa fa-user-secret"></span>
+            </div>
+            <div class="post-user-name">Sherlyn Secret Sosa Sonninasa</div>
+        </div>
+        <div class="post-body">
+            <div class="post-body-content">
+                The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds
+                jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex! Fox nymphs grab quick-jived waltz. Brick
+                quiz whangs jumpy veldt fox. Bright vixens jump; dozy fowl quack. Quick wafting zephyrs vex bold Jim. Quick
+                zephyrs blow, vexing daft Jim. Sex-charged fop blew my junk TV quiz. How quickly daft jumping zebras vex.
+                Two driven jocks help fax my big quiz. Quick, Baz, get my woven flax jodhpurs! "Now fax quiz Jack!" my brave
+                ghost pled. Five quacking zephyrs jolt my wax bed. </div>
+            <div class="post-body-date">
+                December 4
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <div class="post-user">
+            <div class="post-user-portrait">
+                <span class="icon-color fa fa-users"></span>
+            </div>
+            <div class="post-user-name">Sherlyn S.</div>
+        </div>
+        <div class="post-body">
+            <div class="post-body-content">
+                Flummoxed by job, kvetching W. zaps Iraq. Cozy sphinx waves quart jug of bad milk. A very bad quack might jinx zippy fowls.
+                Few quips galvanized the mock jury box. Quick brown dogs jump over the lazy fox. The jay, pig, fox, zebra,
+                and my wolves quack! Blowzy red vixens fight for a quick jump. Joaquin Phoenix was gazed by MTV for luck.
+                A wizard’s job is to vex chumps quickly in fog. Watch "Jeopardy!", Alex Trebek's fun TV quiz game. Woven
+                silk pyjamas exchanged for blue quartz.
+            </div>
+            <div class="post-body-date">
+                December 4
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <div class="post-user">
+            <div class="post-user-portrait">
+                <span class="icon-color fa fa-users"></span>
+            </div>
+            <div class="post-user-name">Sher S.</div>
+        </div>
+        <div class="post-body">
+            <div class="post-body-content">
+                Flummoxed by job, kvetching W. zaps Iraq.
+            </div>
+            <div class="post-body-date">
+                December 40
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
