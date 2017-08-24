@@ -1,0 +1,127 @@
+/* 
+wd-400.css
+Doug Hoff
+Last edited 8/9/2017 
+*/
+// Google Material Design colors
+$red:       hsl(4, 90%, 58%);
+$hot-pink:  hsl(340, 82%, 52%);
+$magenta:   hsl(291, 64%, 42%);
+$purple:    hsl(262, 52%, 47%);
+$violet:    hsl(231, 48%, 48%);
+$blue-dark: hsl(207, 90%, 54%);
+$blue:      hsl(199, 98%, 48%);
+$blue-cyan: hsl(187, 100%, 42%);
+
+$green-sea: hsl(174, 100%, 29%);
+$green-dark:hsl(122, 40%, 49%);
+$green:     hsl(88, 50%, 53%);
+$chartreuse:hsl(66, 70%, 54%);
+$yellow:    hsl(54, 100%, 62%);
+$gold:      hsl(45, 100%, 51%);
+$orange:    hsl(36, 100%, 50%);
+$red-orange:hsl(14, 100%, 57%);
+
+$brown:     #795548;
+$grey:      hsl(0, 0%, 62%);
+$gray:      hsl(0, 0%, 62%);
+$blue-gray: hsl(200, 18%, 46%);
+$blue-grey: hsl(200, 18%, 46%);
+
+    /* Font families from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500i,900');
+@import url('https://fonts.googleapis.com/css?family=Aladin');
+.roboto {    font-family: 'Roboto', sans-serif; }
+.aladin {    font-family: 'Aladin', sans-serif; }
+
+/*************************** Elements ***********************************/
+
+html {
+    @extend .roboto;
+    margin-left: 1rem;
+    font-size: 62.5%; // Mr. Rutter’s magic font-size
+}
+body {
+    line-height: 1.4;
+    font-size: 1.6rem;
+}
+
+/* headings */
+.headline-base {
+    line-height: 1.0;
+    margin-bottom: 0;
+    color: $violet;
+}
+h1 {
+    @extend .headline-base;
+    font-size: 4rem;
+}
+h2 {
+    @extend .headline-base;
+    font-size: 2rem;
+}
+
+/* links */
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: $blue-grey;
+}
+
+a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: grey;
+}
+
+/* lists */
+ul, ol {
+    margin-top: .5rem;
+}
+
+/* tables */
+td, th {
+    border: 1px solid $violet;
+    margin: 0;
+    padding: 1rem;
+}
+th {
+    color: $blue;
+}
+tr td:first-child {
+    color: $violet;
+    font-weight: bold;
+    font-size: 2rem;
+}
+/*************************** Classes ***********************************/
+
+/* gradients */
+.bg-gradient {
+    /* Permalink - use to edit and share this gradient: http: //colorzilla.com/gradient-editor/#b48dd6+0,7db9e8+100 */
+    background: #b48dd6;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #b48dd6 0%, #7db9e8 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #b48dd6 0%, #7db9e8 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #b48dd6 0%, #7db9e8 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+/* colors from Material Design */
+
+.green {
+    color: $green;
+}
+.grey {
+    color: $grey;
+}
+.gray {
+    color: $gray;
+}
+.blue-gray {
+    color: $blue-gray;
+}

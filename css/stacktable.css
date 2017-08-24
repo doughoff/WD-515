@@ -1,0 +1,46 @@
+.stacktable {
+    width: 95%;
+    border-collapse: collapse;
+}
+
+.st-head-row {
+    padding-top: 1em;
+}
+
+.st-head-row.st-head-row-main {
+    font-size: 1.5em;
+    padding-top: 0;
+}
+
+.st-key {
+    width: 49%;
+    text-align: right;
+    padding-right: 1%;
+}
+
+.st-val {
+    width: 49%;
+    padding-left: 1%;
+}
+
+
+/* RESPONSIVE EXAMPLE */
+
+.stacktable.small-only {
+    display: table;
+    font-size: 1.2rem;
+    
+}
+
+.stacktable.large-only {
+    display: none;
+}
+
+@media (min-width: 1000px) {
+    .stacktable.large-only {
+        display: table;
+    }
+    .stacktable.small-only {
+        display: none;
+    }
+}

@@ -1,4 +1,4 @@
-@mixin columnize($columns, $gap) {	
+@mixin columns-and-gap($columns, $gap) {	
 	// Number of columns
 	-webkit-column-count: $columns;
 	-moz-column-count: $columns;
@@ -10,5 +10,5 @@
 }
 
 .multi-column {
-    @include columnize(3, 30px);
+    @include columns-and-gap(3, 30px);
 }

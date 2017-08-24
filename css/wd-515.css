@@ -1,16 +1,110 @@
 /* 
-WD-515.css
+wd-400.css
 Doug Hoff
-Aug 2017
+Last edited 8/9/2017 
 */
+/* Font families from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500i,900");
+@import url("https://fonts.googleapis.com/css?family=Aladin");
+.roboto, html {
+  font-family: 'Roboto', sans-serif;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+.aladin {
+  font-family: 'Aladin', sans-serif;
+}
+
+/*************************** Elements ***********************************/
 html {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 1rem;
+  margin-left: 1rem;
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.4;
+  font-size: 1.6rem;
+}
+
+/* headings */
+.headline-base, h1, h2 {
+  line-height: 1.0;
+  margin-bottom: 0;
+  color: #4051b5;
 }
 
 h1 {
-    font-size: 3em;
-    color: #7EABD8
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* links */
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #607c8a;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: grey;
+}
+
+/* lists */
+ul, ol {
+  margin-top: .5rem;
+}
+
+/* tables */
+td, th {
+  border: 1px solid #4051b5;
+  margin: 0;
+  padding: 1rem;
+}
+
+th {
+  color: #02a6f2;
+}
+
+tr td:first-child {
+  color: #4051b5;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/*************************** Classes ***********************************/
+/* gradients */
+.bg-gradient {
+  /* Permalink - use to edit and share this gradient: http: //colorzilla.com/gradient-editor/#b48dd6+0,7db9e8+100 */
+  background: #b48dd6;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #b48dd6 0%, #7db9e8 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #b48dd6 0%, #7db9e8 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #b48dd6 0%, #7db9e8 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+/* colors from Material Design */
+.green {
+  color: #8bc34b;
+}
+
+.grey {
+  color: #9e9e9e;
+}
+
+.gray {
+  color: #9e9e9e;
+}
+
+.blue-gray {
+  color: #607c8a;
 }
