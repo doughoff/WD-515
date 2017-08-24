@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- Icons =====================================================================-->
+    <!-- iPad and iPad mini (with @2× display) iOS ≥ 8 -->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/touch/apple-touch-icon-180x180-precomposed.png">
+    <!-- iPad 3+ (with @2× display) iOS ≥ 7 -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/touch/apple-touch-icon-152x152-precomposed.png">
+    <!-- iPad (with @2× display) iOS ≤ 6 -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+    <!-- iPhone (with @2× and @3 display) iOS ≥ 7 -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/touch/apple-touch-icon-120x120-precomposed.png">
+    <!-- iPhone (with @2× display) iOS ≤ 6 -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+    <!-- iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7 -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/touch/apple-touch-icon-76x76-precomposed.png">
+    <!-- iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6 -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+    <!-- Android Stock Browser and non-Retina iPhone and iPod Touch -->
+    <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+    <!-- Fallback for everything else -->
+    <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+    <!--
+            Chrome 31+ has home screen icon 192×192 (the recommended size for multiple resolutions).
+            If it’s not defined on that size it will take 128×128.
+        -->
+    <link rel="icon" sizes="192x192" href="img/touch/touch-icon-192x192.png">
+    <link rel="icon" sizes="128x128" href="img/touch/touch-icon-128x128.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#222222">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Stylesheets =====================================================================-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <link rel="stylesheet" href="../css/wd-515.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+    <style>
+        /* Skeleton additional CSS for template */
+    /* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+  border-radius: 100px;
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/* Hero
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.phones {
+  position: relative;
+}
+.phone {
+  position: relative;
+  max-width: 80%;
+  margin: 3rem auto -12rem;
+}
+.phone + .phone {
+  display: none;
+}
+
+/* Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.values {
+  background-image: url('https://i.ytimg.com/vi/SpnJVwVVNO0/maxresdefault.jpg');
+  background-size: cover;
+  color: #fff;
+  padding-bottom: 5rem;
+}
+.value-multiplier {
+  margin-bottom: .5rem;
+  color: #11DFC7;
+}
+.value-heading {
+  margin-bottom: .3rem;
+}
+.value-description {
+  opacity: .8;
+  font-weight: 300;
+}
+
+/* Help
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-help {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Categories
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.categories {
+  background-image: url('https://i.ytimg.com/vi/PLXBQ78jFJ0/maxresdefault.jpg');
+  background-size: cover;
+  color: #fff;
+}
+.categories .section-description { 
+  margin-bottom: 4rem;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  .phone {
+    position: absolute;
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+  }
+  .phone + .phone {
+    top: -6rem;
+    display: block;
+    max-width: 73.8%;
+    right: 0;
+    z-index: 2;
+    max-height: 338px;
+  }
+  .hero-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .phone {
+    top: -14rem;
+    right: 5rem;
+    max-height: 510px;
+  }
+  .phone + .phone {
+    top: -12rem;
+    max-height: 472px;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
+  }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+  .hero {
+    padding: 22rem 0;
+  }
+  .hero-heading {
+    font-size: 3.0rem;
+  }
+  .phone {
+    top: -16rem;
+    max-height: 615px;
+  }
+  .phone + .phone {
+    top: -14rem;
+    max-height: 570px;
+  }
+}
+</style>
+<!-- JavaScript =====================================================================-->
+    <script>
+    </script>
+
+    <title>Skeleton template</title>
+</head>
+
+<body>
+    <h1>Skeleton template</h1>
+    <div class="section hero">
+            <div class="container">
+              <div class="row">
+                <div class="one-half column">
+                  <h4 class="hero-heading">Stop coding non-responsive sites. Let users view sites from anywhere.</h4>
+                  <a class="button button-primary" href="http://getskeleton.com">Try Skeleton</a>
+                </div>
+                <div class="one-half column phones">
+                  <img class="phone" src="https://i5.walmartimages.com/asr/20caa881-9f84-478b-8259-b9c3448e1007_1.f85576fe20ee4efe41421c04faaa310f.jpeg">
+                  <img class="phone" src="https://i5.walmartimages.com/asr/20caa881-9f84-478b-8259-b9c3448e1007_1.f85576fe20ee4efe41421c04faaa310f.jpeg">
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="section values">
+            <div class="container">
+              <div class="row">
+                <div class="one-third column value">
+                  <h2 class="value-multiplier">67%</h2>
+                  <h5 class="value-heading">Purchase Increase</h5>
+                  <p class="value-description">Percentage of users more likely to purchase on mobile friendly site.</p>
+                </div>
+                <div class="one-third column value">
+                  <h2 class="value-multiplier">90%</h2>
+                  <h5 class="value-heading">Multi-device Users</h5>
+                  <p class="value-description">Most of the world accesses the internet on multiple devices.</p>
+                </div>
+                <div class="one-third column value">
+                  <h2 class="value-multiplier">66%</h2>
+                  <h5 class="value-heading">Sad Users</h5>
+                  <p class="value-description">Percentage of users that are frustrated with page load times.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+          <div class="section get-help">
+            <div class="container">
+              <h3 class="section-heading">Need help getting started?</h3>
+              <p class="section-description">Skeleton is an amazingly easy place to start with responsive development. If you want to learn more, just visit the documentation!</p>
+              <a class="button button-primary" href="http://getskeleton.com">View Skeleton Docs</a>
+            </div>
+          </div>
+        
+          <div class="section categories">
+            <div class="container">
+              <h3 class="section-heading">Responsive Images</h3>
+              <p class="section-description">Skeleton images sit easily in grid with .u-max-full-width class. I suggest exploring solution to serving different images based on device size.</p>
+              <div class="row">
+                <div class="one-half column category">
+                  <img class="u-max-full-width" src="images/placeholder.png">
+                </div>
+                <div class="one-half column category">
+                  <img class="u-max-full-width" src="images/placeholder.png">
+                </div>
+              </div>
+            </div>
+          </div>
+</body>
+
+</html>
