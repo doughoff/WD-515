@@ -47,83 +47,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../css/wd-515.css">
 
-
     <!-- JavaScript =====================================================================-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+    </script>
 
-    <title>WD-515 Mobile Web App Development</title>
+    <title>Media Capture</title>
 </head>
 
 <body>
-    <h1>WD-515 Mobile Web App Development</h1>
-
-    <h2>Templates</h2>
-    <ul>
-        <li><a href="templates/template.html">Basic template</a></li>
-        <li><a href="templates/template-jquery.html">Template with jQuery</a></li>
-        <li><a href="templates/template-modernizr.html">Template with jQuery & Modernizr</a></li>
-        <li><a href="templates/template-font-awesome.html">Template with FontAwesome</a></li>
-    </ul>
-
-    <h2>Browser</h2>
-    <ul>
-        <li><a href="browser/dimensions.html">Dimensions</a></li>
-        <li><a href="browser/relative-font-sizes.html">Relative font sizes</a></li>
-    </ul>
-
-    <h2>Detection</h2>
-    <ul>
-        <li><a href="detection/media-query-detection.html">Media query detection</a></li>
-        <li><a href="detection/device-modernizr.html">Device detection with Modernizr</a></li>
-        <li><a href="detection/inspect-user-agent.html">Inspect user agent</a></li>
-        <li><a href="detection/user-agent.html">User agent</a></li>
-
-    </ul>
-
-    <h2>Responsive</h2>
-    <ul>
-        <li><a href="responsive\breakpoint-worksheet.html">Breakpoint worksheet</a></li>
-        <li><a href="responsive\cropping.html">Image cropping</a></li>
-        <li><a href="responsive\cropping-center.html">Image cropping center</a></li>
-        <li><a href="responsive\cropping-hybrid.html">Image cropping-hybrid</a></li>
-    </ul>
-
-    <h2>Widgets</h2>
-    <ul>
-        <li><a href="widgets/navigation.html">Responsive navigation</a></li>
-        <li><a href="widgets/stacktable.html">Stacktable</a></li>
-    </ul>
-
-    <h2>Frameworks</h2>
-    <ul>
-        <li><a href="frameworks/bootstrap4.html">Twitter Bootstrap 4 Jumbotron and Grids example</a></li>
-        <li><a href="frameworks/foundation.html">Zurb Foundation 6 News/Magazine template</a></li>
-        <li><a href="frameworks/skeleton.html">Skeleton template</a></li>
-    </ul>
-
-    <h2>APIs</h2>
-    <ul>
-        <li><a href="apis/maps.html">Google maps</a></li>
-        <li><a href="apis/local-storage.html">Local storage</a></li>
-    </ul>
-
-    <h2>Layouts</h2>
-    <ul>
-        <li><a href="layouts/flexbox.html">Flexbox</a></li>
-        <li><a href="layouts/grid.html">Grid</a></li>
-    </ul>
-
-    <h2>Device</h2>
-    <ul>
-            <li><a href="device/media-capture.html">Media capture</a></li>
-            <li><a href="device/activity-links.html">Phone activity links</a></li>
-        </ul>
-
-    <h2>Touch</h2>
-    <ul>
-        <li><a href="touch/drag-and-drop.html">Drag and drop</a></li>
-    </ul>
-
+    <h1>Media Capture</h1>
+    <form enctype='multipart/form-data' method='post' action="">
+        <p>Capture image:  <input type='file' accept='image/*' capture='camera'></p>
+        <p>Capture audio:  <input type='file' accept='audio/*' capture='microphone'></p>
+        <p>Capture video:  <input type='file' accept='video/*' capture='camcorder'></p>
+        
+        <video></video>
+        <script>
+            var video = document.querySelector('video');
+            var URL = window.URL || window.webkitURL;
+            var getUserMedia =
+                navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+            var video = document.getElementById('player');
+            if (getUserMedia) {
+                getUserMedia({
+                    audio: true,
+                    video: true
+                }, function (stream) {
+                    video.src = URL.createObjectURL(stream);
+                    video.play();
+                });
+            }
+        </script>
+        <input type="submit" >
+    </form>
 </body>
 
 </html>
