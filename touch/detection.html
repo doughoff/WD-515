@@ -64,7 +64,7 @@
 <body>
     <h1>Touch with Modernizr detection</h1>
     <p>Run on remote server.</p>
-    <p id='features'>Features: </p>
+    <p id='features'>Detected features (not widely supported): </p>
     <ul>
         <li id="touchstart">touchstart:
             <data>false</data>
@@ -85,6 +85,7 @@
             <data>false</data>
         </li>
     </ul>
+    <p>Type of event detected: <span id='touchevent'></span></p>
     <script>
         var ontouchstart = "ontouchstart" in document;
         var ontouchmove = "ontouchmove" in document;
@@ -111,6 +112,10 @@
         if (ontouchleave) {
             document.querySelector('#touchleave>data').innerHTML = '<b>true</b>';
         }
+        $('body').on('touchstart touchend touchmove touchcancel touchenter touchleave', function(event){
+            console.log(event);
+            $('#touchevent').append(event.type + '\n<br>');
+        })
     </script>
 </body>
 
