@@ -39,99 +39,79 @@
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#222222">
-
-    <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Stylesheets =====================================================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" href="../css/wd-515.css">
+    <style>
+        html.touch #features::after {
+            content: 'Touch ';
+        }
 
+        html.no-touch #features::after {
+            content: 'No Touch ';
+        }
+    </style>
 
     <!-- JavaScript =====================================================================-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 
-    <title>WD-515 Mobile Web App Development</title>
+    <title>Touch with Modernizr detection</title>
 </head>
 
 <body>
-    <h1>WD-515 Mobile Web App Development</h1>
-
-    <h2>Templates</h2>
+    <h1>Touch with Modernizr detection</h1>
+    <p>Run on remote server.</p>
+    <p id='features'>Features: </p>
     <ul>
-        <li><a href="templates/template.html">Basic template</a></li>
-        <li><a href="templates/template-jquery.html">Template with jQuery</a></li>
-        <li><a href="templates/template-modernizr.html">Template with jQuery & Modernizr</a></li>
-        <li><a href="templates/template-font-awesome.html">Template with FontAwesome</a></li>
+        <li id="touchstart">touchstart:
+            <data>false</data>
+        </li>
+        <li id="touchmove">touchmove:
+            <data>false</data>
+        </li>
+        <li id="touchend">touchend:
+            <data>false</data>
+        </li>
+        <li id="touchcancel">touchcancel:
+            <data>false</data>
+        </li>
+        <li id="touchenter">touchenter:
+            <data>false</data>
+        </li>
+        <li id="touchleave">touchleave:
+            <data>false</data>
+        </li>
     </ul>
+    <script>
+        var ontouchstart = "ontouchstart" in document;
+        var ontouchmove = "ontouchmove" in document;
+        var ontouchend = "ontouchend" in document;
+        var ontouchcancel = "ontouchcancel" in document;
+        var ontouchenter = "ontouchenter" in document;
+        var ontouchleave = "ontouchleave" in document;
 
-    <h2>Browser</h2>
-    <ul>
-        <li><a href="browser/dimensions.html">Dimensions</a></li>
-        <li><a href="browser/relative-font-sizes.html">Relative font sizes</a></li>
-    </ul>
-
-    <h2>Detection</h2>
-    <ul>
-        <li><a href="detection/media-query-detection.html">Media query detection</a></li>
-        <li><a href="detection/device-modernizr.html">Device detection with Modernizr</a></li>
-        <li><a href="detection/inspect-user-agent.html">Inspect user agent</a></li>
-        <li><a href="detection/user-agent.html">User agent</a></li>
-
-    </ul>
-
-    <h2>Responsive</h2>
-    <ul>
-        <li><a href="responsive\breakpoint-worksheet.html">Breakpoint worksheet</a></li>
-        <li><a href="responsive\cropping.html">Image cropping</a></li>
-        <li><a href="responsive\cropping-center.html">Image cropping center</a></li>
-        <li><a href="responsive\cropping-hybrid.html">Image cropping-hybrid</a></li>
-    </ul>
-
-    <h2>Widgets</h2>
-    <ul>
-        <li><a href="widgets/navigation.html">Responsive navigation</a></li>
-        <li><a href="widgets/stacktable.html">Stacktable</a></li>
-    </ul>
-
-    <h2>Frameworks</h2>
-    <ul>
-        <li><a href="frameworks/bootstrap4.html">Twitter Bootstrap 4 Jumbotron and Grids example</a></li>
-        <li><a href="frameworks/foundation.html">Zurb Foundation 6 News/Magazine template</a></li>
-        <li><a href="frameworks/skeleton.html">Skeleton template</a></li>
-    </ul>
-
-    <h2>APIs</h2>
-    <ul>
-        <li><a href="apis/maps.html">Google maps</a></li>
-        <li><a href="apis/local-storage.html">Local storage</a></li>
-    </ul>
-
-    <h2>Layouts</h2>
-    <ul>
-        <li><a href="layouts/flexbox.html">Flexbox</a></li>
-        <li><a href="layouts/grid.html">Grid</a></li>
-    </ul>
-
-    <h2>Media</h2>
-    <ul>
-        <li><a href="media/capture.html">Media capture</a></li>
-        <li><a href="media/video.html">Video</a></li>
-    </ul>
-
-    <h2>Device</h2>
-    <ul>
-        <li><a href="device/activity-links.html">Phone activity links</a></li>
-    </ul>
-
-    <h2>Touch</h2>
-    <ul>
-        <li><a href="touch/finger-painter.html">Finger Painter</a></li>
-        <li><a href="touch/detection.html">Touch Detection</a></li>
-        <li><a href="touch/hammer-test.html">Hammer test</a></li>
-        <li><a href="touch/drag-and-drop.html">Drag and drop</a></li>
-    </ul>
-
+        if (ontouchstart) {
+            document.querySelector('#touchstart>data').innerHTML = '<b>true</b>';
+        }
+        if (ontouchmove) {
+            document.querySelector('#touchmove>data').innerHTML = '<b>true</b>';
+        }
+        if (ontouchend) {
+            document.querySelector('#touchend>data').innerHTML = '<b>true</b>';
+        }
+        if (ontouchcancel) {
+            document.querySelector('#touchcancel>data').innerHTML = '<b>true</b>';
+        }
+        if (ontouchenter) {
+            document.querySelector('#touchenter>data').innerHTML = '<b>true</b>';
+        }
+        if (ontouchleave) {
+            document.querySelector('#touchleave>data').innerHTML = '<b>true</b>';
+        }
+    </script>
 </body>
 
 </html>
