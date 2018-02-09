@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mobile Web Apps class exercise</title>
+    <meta name="description" content="Centriq Mobile Web Apps Development class exercise file">
+    <meta name="author" content="My Name">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+    <link rel="shortcut icon" sizes="196x196" href="img/touch/touch-icon-196x196.png">
+    <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#222222">
+
+    <link rel="stylesheet" href="css/wd515.css">
+    <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    <style>
+        .grid {
+            display: grid;
+            grid-gap: 10px;
+        }
+
+        .col-2 {
+            grid-template-columns: 50% 50%;
+        }
+
+        .col-2-mixed {
+            grid-template-columns: 70% 30%;
+        }
+
+        .col-3 {
+            grid-template-columns: 33% 33% 33%;
+        }
+
+        .col-3-mixed {
+            grid-template-columns: 20% 40% 20%;
+        }
+
+        .col-4 {
+            grid-template-columns: repeat(4, [col] 1fr);
+        }
+
+        .col-4-mixed {
+            grid-template-columns: 1fr 20rem 2fr 1fr;
+        }
+
+        .box {
+            background-color: darkslategray;
+            color: white;
+            border-radius: 5px;
+            padding: 1rem;
+        }
+
+        .resized {
+            grid-column: 4;
+            grid-row: 1;
+            font-size: 1.2rem;
+        }
+
+        .salmon {
+            background-color: darksalmon
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Add your site or application content here -->
+    <h1>CSS Grid</h1>
+    <!-- div.grid>div.box*6>p>lorem -->
+    <div class="grid col-4-mixed">
+        <div class="box resized salmon">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi explicabo debitis libero ab placeat soluta ullam
+                unde, officiis, saepe, veniam recusandae natus aliquam sit deleniti cupiditate eius quos nihil tempora!</p>
+        </div>
+        <div class="box">
+            <p>Iusto quidem obcaecati ipsa doloremque cum, voluptatibus officia. Quas, mollitia nemo suscipit error debitis
+                exercitationem consequuntur laudantium aliquid saepe earum magnam nobis odio, molestiae qui provident. Nemo
+                officia laborum vel.</p>
+        </div>
+        <div class="box">
+            <p>Obcaecati saepe dolores deserunt? Nisi, sed perspiciatis impedit, dolore soluta exercitationem laborum praesentium
+                optio beatae totam aut velit distinctio obcaecati accusamus iste. Expedita tenetur labore, aspernatur harum
+                itaque soluta fuga.</p>
+        </div>
+        <div class="box">
+            <p>A possimus aut beatae debitis veniam non illo doloremque velit culpa. Ut autem aspernatur dignissimos aperiam
+                fugit accusantium consequatur illum quam, culpa labore sit doloremque? Nulla iste placeat omnis est?</p>
+        </div>
+        <div class="box">
+            <p>Iste ad libero fugiat iusto! Facere, soluta sit? Saepe beatae iusto tempore alias quam, sequi obcaecati voluptas
+                eum consequatur a natus eveniet maxime sunt necessitatibus aperiam error vero earum aut.</p>
+        </div>
+        <div class="box">
+            <p>Aliquam soluta culpa officia possimus accusamus nostrum quia est fugiat deleniti id necessitatibus perferendis
+                ipsam cupiditate itaque iusto, vel saepe voluptatibus labore molestias? A, sapiente quis eligendi nulla quos
+                quia.
+            </p>
+        </div>
+    </div>
+    <script src="js/vendor/jquery-2.1.0.min.js"></script>
+    <script src="js/helper.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        console.info('jQuery is active.');
+        // page specific JavaScript follows...
+    </script>
+
+</body>
+
+</html>
