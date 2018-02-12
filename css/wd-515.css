@@ -1,11 +1,43 @@
 /* 
 wd-400.css
 Doug Hoff
-Last edited 8/9/2017 
+Last edited 2/12/2018 
 */
-/* Font families from Google Fonts */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500i,900");
 @import url("https://fonts.googleapis.com/css?family=Aladin");
+.red {
+  color: #f44034;
+}
+
+.hot-pink {
+  color: #e92063;
+}
+
+.magenta {
+  color: #9b27b0;
+}
+
+.purple {
+  color: #673ab6;
+}
+
+.violet {
+  color: #4051b5;
+}
+
+.blue-dark {
+  color: #2094f3;
+}
+
+.blue {
+  color: #02a6f2;
+}
+
+.blue-cyan {
+  color: #00bdd6;
+}
+
+/* Font families from Google Fonts */
 .roboto, html {
   font-family: 'Roboto', sans-serif;
 }
@@ -93,18 +125,4 @@ tr td:first-child {
 }
 
 /* colors from Material Design */
-.green {
-  color: #8bc34b;
-}
-
-.grey {
-  color: #9e9e9e;
-}
-
-.gray {
-  color: #9e9e9e;
-}
-
-.blue-gray {
-  color: #607c8a;
-}
+/*# sourceMappingURL=wd-515.css.map */

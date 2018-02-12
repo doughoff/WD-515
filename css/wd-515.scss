@@ -1,32 +1,9 @@
 /* 
 wd-400.css
 Doug Hoff
-Last edited 8/9/2017 
+Last edited 2/12/2018 
 */
-// Google Material Design colors
-$red:       hsl(4, 90%, 58%);
-$hot-pink:  hsl(340, 82%, 52%);
-$magenta:   hsl(291, 64%, 42%);
-$purple:    hsl(262, 52%, 47%);
-$violet:    hsl(231, 48%, 48%);
-$blue-dark: hsl(207, 90%, 54%);
-$blue:      hsl(199, 98%, 48%);
-$blue-cyan: hsl(187, 100%, 42%);
-
-$green-sea: hsl(174, 100%, 29%);
-$green-dark:hsl(122, 40%, 49%);
-$green:     hsl(88, 50%, 53%);
-$chartreuse:hsl(66, 70%, 54%);
-$yellow:    hsl(54, 100%, 62%);
-$gold:      hsl(45, 100%, 51%);
-$orange:    hsl(36, 100%, 50%);
-$red-orange:hsl(14, 100%, 57%);
-
-$brown:     #795548;
-$grey:      hsl(0, 0%, 62%);
-$gray:      hsl(0, 0%, 62%);
-$blue-gray: hsl(200, 18%, 46%);
-$blue-grey: hsl(200, 18%, 46%);
+@import 'colors';
 
     /* Font families from Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500i,900');
@@ -113,15 +90,3 @@ tr td:first-child {
 
 /* colors from Material Design */
 
-.green {
-    color: $green;
-}
-.grey {
-    color: $grey;
-}
-.gray {
-    color: $gray;
-}
-.blue-gray {
-    color: $blue-gray;
-}
