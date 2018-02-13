@@ -37,6 +37,46 @@ Last edited 2/12/2018
   color: #00bdd6;
 }
 
+.primary-lighter-2 {
+  color: #a8ffff;
+}
+
+.primary-lighter-1 {
+  color: #69d3d3;
+}
+
+.primary {
+  color: #39acac;
+}
+
+.primary-darker-1 {
+  color: #157f7f;
+}
+
+.primary-darker-2 {
+  color: #005757;
+}
+
+.complement-lighter-2 {
+  color: #cd89cd;
+}
+
+.complement-lighter-1 {
+  color: #aa55aa;
+}
+
+.complement {
+  color: #862d86;
+}
+
+.complement-darker-1 {
+  color: #641164;
+}
+
+.complement-darker-2 {
+  color: #420042;
+}
+
 /* Font families from Google Fonts */
 .roboto, html {
   font-family: 'Roboto', sans-serif;

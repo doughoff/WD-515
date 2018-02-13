@@ -62,3 +62,42 @@ $grey:      hsl(0, 0%, 62%);
 $gray:      hsl(0, 0%, 62%);
 $blue-gray: hsl(200, 18%, 46%);
 $blue-grey: hsl(200, 18%, 46%);
+
+
+// ------------------------------ hue reference
+$hue-red: 0;
+$hue-yellow: 60;
+$hue-green: 120;
+$hue-blue: 180;
+$hue-violet: 240;
+$hue-magenta: 290;
+// ------------------------------ Colors: paletton.com Monochromatic + complementary
+$base-hue : $hue-blue;
+
+$primary-full-strength: hsl($base-hue, 100%, 50%);
+$primary-lighter-2: hsl($base-hue, 100%, 83%);
+$primary-lighter-1: hsl($base-hue, 55%, 62%);
+$primary:           hsl($base-hue, 50%, 45%);
+$primary-complement:  complement($primary);
+$primary-darker-1:  hsl($base-hue, 72%, 29%);
+$primary-darker-2:  hsl($base-hue, 100%, 17%); 
+
+$complement-hue: $base-hue + 120;
+$complement-lighter-2: hsl($complement-hue, 40%, 67%); 
+$complement-lighter-1: hsl($complement-hue, 33%, 50%); 
+$complement:           hsl($complement-hue, 50%, 35%);
+$complement-darker-1:  hsl($complement-hue, 71%, 23%); 
+$complement-darker-2:  hsl($complement-hue, 100%, 13%); 
+
+// ------------------------------ colors from variables
+.primary-lighter-2 { color: $primary-lighter-2; }
+.primary-lighter-1 { color: $primary-lighter-1; }
+.primary { color: $primary; }
+.primary-darker-1 { color: $primary-darker-1; }
+.primary-darker-2 { color: $primary-darker-2; }
+
+.complement-lighter-2 { color: $complement-lighter-2; }
+.complement-lighter-1 { color: $complement-lighter-1; }
+.complement { color: $complement; }
+.complement-darker-1 { color: $complement-darker-1; }
+.complement-darker-2 { color: $complement-darker-2; }

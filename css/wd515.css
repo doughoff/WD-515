@@ -5,6 +5,8 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500i,900");
+@import url("https://fonts.googleapis.com/css?family=Aladin");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -566,6 +568,91 @@ textarea[contenteditable] {
   /* Style adjustments for viewports that meet the condition */
 }
 
+.red {
+  color: #f44034;
+}
+
+.hot-pink {
+  color: #e92063;
+}
+
+.magenta {
+  color: #9b27b0;
+}
+
+.purple {
+  color: #673ab6;
+}
+
+.violet {
+  color: #4051b5;
+}
+
+.blue-dark {
+  color: #2094f3;
+}
+
+.blue {
+  color: #02a6f2;
+}
+
+.blue-cyan {
+  color: #00bdd6;
+}
+
+.primary-lighter-2 {
+  color: #a8ffff;
+}
+
+.primary-lighter-1 {
+  color: #69d3d3;
+}
+
+.primary {
+  color: #39acac;
+}
+
+.primary-darker-1 {
+  color: #157f7f;
+}
+
+.primary-darker-2 {
+  color: #005757;
+}
+
+.complement-lighter-2 {
+  color: #cd89cd;
+}
+
+.complement-lighter-1 {
+  color: #aa55aa;
+}
+
+.complement {
+  color: #862d86;
+}
+
+.complement-darker-1 {
+  color: #641164;
+}
+
+.complement-darker-2 {
+  color: #420042;
+}
+
+/* Google Fonts */
+.roboto, html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.aladin {
+  font-family: 'Aladin', sans-serif;
+}
+
+.basesize {
+  font-size: 16px;
+}
+
 @media print {
   /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
   /*
@@ -896,59 +983,28 @@ textarea[contenteditable] {
   }
 }
 
-.basesize {
-  font-size: 16px;
-}
-
-.primary-lighter-2 {
-  color: #a8ffff;
-}
-
-.primary-lighter-1 {
-  color: #69d3d3;
-}
-
-.primary {
-  color: #39acac;
-}
-
-.primary-darker-1 {
-  color: #157f7f;
-}
-
-.primary-darker-2 {
-  color: #005757;
-}
-
-.complement-lighter-2 {
-  color: #cd89cd;
-}
-
-.complement-lighter-1 {
-  color: #aa55aa;
-}
-
-.complement {
-  color: #862d86;
-}
-
-.complement-darker-1 {
-  color: #641164;
-}
-
-.complement-darker-2 {
-  color: #420042;
+html {
+  margin-left: 1rem;
 }
 
 body {
   font-size: 16px;
+  line-height: 1.4;
   margin-left: 1rem;
 }
 
-h1, h2, h3, h4, h5 {
+.headingSize {
+  font-size: 48px;
+}
+
+.headline-base, h1 {
   font-size: 48px;
   color: #69d3d3;
   margin: 1rem 0 0 0;
+}
+
+h1 {
+  font-size: 4rem;
 }
 
 h2 {
@@ -981,6 +1037,47 @@ a :visited {
 
 a :hover {
   columns: #69d3d3;
+}
+
+/*************************** Elements ***********************************/
+/* links */
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #607c8a;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: grey;
+}
+
+/* lists */
+ul,
+ol {
+  margin-top: .5rem;
+}
+
+/* tables */
+td,
+th {
+  border: 1px solid #4051b5;
+  margin: 0;
+  padding: 1rem;
+}
+
+th {
+  color: #02a6f2;
+}
+
+tr td:first-child {
+  color: #4051b5;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 .multi-column3 {
