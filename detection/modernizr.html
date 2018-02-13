@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Modernizr exercise</title>
+    <meta name="description" content="Centriq Mobile Web Apps Development class exercise file">
+    <meta name="author" content="My Name">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="stylesheet" href="../css/wd515.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <style>
+        /* You only get one before and one after so pick only two features to show */
+        /* Use jQuery / JavaScript to show more features */
+        .touch .features:after {
+            content: "Touch aware. "
+        }
+        .no-touch .features:after {
+            content: "Not touch aware. "
+        }
+        .svg .features:before {
+            content: "Supports SVG. "
+        }
+        .no-svg .features:before {
+            content: "Does not support SVG. "
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Modernizr exercise</h1>
+    <ruby class="features"></ruby>
+
+</body>
+
+</html>

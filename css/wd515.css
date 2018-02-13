@@ -1009,4 +1009,8 @@ a :hover {
   -moz-column-gap: 30px;
   column-gap: 30px;
 }
+
+ruby {
+  font-size: .6rem;
+}
 /*# sourceMappingURL=wd515.css.map */
