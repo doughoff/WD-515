@@ -1,6 +1,7 @@
 // ===================================================== Imports
 @import 'normalize';
 @import 'mobileboilerplate';
+@import 'print';
 
 // ===================================================== Variables
 $baseSize: 16px;
@@ -83,4 +84,24 @@ a {
     :hover {
         columns: $primary-lighter-1;
     }
+}
+
+//---------------------------------- other classes
+@mixin columns-and-gap($columns, $gap) {	
+	// Number of columns
+	-webkit-column-count: $columns;
+	-moz-column-count: $columns;
+	column-count: $columns;	
+	// Gap size
+	-webkit-column-gap: $gap;
+	-moz-column-gap: $gap;
+	column-gap: $gap;
+}
+
+.multi-column3 {
+    @include columns-and-gap(3, 30px);
+}.multi-column2 {
+    @include columns-and-gap(2, 40px);
+}.multi-column4 {
+    @include columns-and-gap(4, 30px);
 }
