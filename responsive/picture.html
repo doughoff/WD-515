@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Picture exercise</title>
+    <meta name="description" content="Centriq Mobile Web Apps Development class exercise file">
+    <meta name="author" content="My Name">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+    <link rel="stylesheet" href="css/wd515.css">
+    <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.min.js"></script>
+    <style>
+        img,
+        picture {
+            float: right;
+            margin-left: 1rem;
+            clear: both;
+            max-width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Add your site or application content here -->
+    <h1>Picture exercise</h1>
+    <a href="https://ericportis.com/posts/2014/srcset-sizes/">Eric Portis on srcset and sizes</a>
+    <br>
+    <a href="https://caniuse.com/#search=srcset">Can I Use info</a>
+    <br>
+    <a href="http://scottjehl.github.io/picturefill/">Picturefill polyfill info</a>
+    <!-- picture - mobile first first match wins, always end with default -->
+    <picture>
+        <source media="(min-width: 1400px)" srcset="../img/monitor-1260.png">
+        <source media="(min-width: 800px)" srcset="../img/tablet-720.png">
+        <img src="../img/cellphone-300.jpg" alt="cell phone" style="width:auto;">
+    </picture>
+    <!-- img - using pixel density of device, src is 1x -->
+    <img src='../img/cellphone-300.jpg' srcset='../img/tablet-720.png 2x, ../img/monitor-1260.png 3x'
+    />
+    <!-- img - using 2014 spec with width of images, choose in srcset, format in media conditions with as many condition, last one is default-->
+    <img src='../img/cellphone-300.jpg'  srcset='../img/tablet-720.png 720w, ../img/monitor-1260.png 1260w' sizes='(min-width: 1260px) 1260px, 100vw'
+    />
+    <div>
+<p><span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium vitae provident quam libero nostrum, eos rem? Natus, laboriosam! Quam eos possimus culpa eaque illum nisi placeat cum ipsam earum ipsa.</span><span>In adipisci omnis alias sint voluptates eum laboriosam aperiam, cum molestias corrupti quae dignissimos quis voluptatibus ea, nemo impedit quia assumenda. Ea unde, dignissimos repellat modi corporis ex commodi optio.</span></p>
+<p><span>Vitae laudantium voluptatibus repellendus quisquam illo, ducimus porro corrupti aliquam accusamus? Molestiae id, exercitationem quod quasi iure a? Aliquam illum libero repellat animi dolores accusantium amet officia praesentium, exercitationem officiis.</span><span>Provident laborum rem consequuntur, vero iste itaque blanditiis dolores mollitia, deleniti vitae esse iusto ipsum nam placeat modi, voluptatibus at possimus harum autem fugit sapiente! Laboriosam eligendi temporibus recusandae alias.</span></p>
+<p><span>Fuga assumenda eius aspernatur nam dignissimos reprehenderit sunt nobis ipsa! Alias veritatis amet reprehenderit ipsam expedita, voluptates ratione aut? Expedita, maxime. Nostrum officia deserunt numquam placeat iure dicta culpa autem.</span><span>Illo nulla quas nihil? Autem quam optio eos, unde provident explicabo corporis eveniet assumenda incidunt magni libero aliquid labore laudantium natus quisquam nobis ratione sapiente. Adipisci nam hic voluptatem consequatur.</span></p>
+<p><span>Veniam adipisci, possimus quaerat est magnam quasi praesentium debitis eius officiis asperiores velit necessitatibus corrupti quidem placeat similique eligendi amet ipsa culpa! Et, alias. Minima vero nesciunt labore id facilis.</span><span>Unde ipsa minima eius, corrupti odit rerum at nulla cupiditate iure illo hic perspiciatis velit maiores maxime enim soluta vitae necessitatibus, cum quia ab neque non animi recusandae amet! Vero.</span></p>
+<p><span>Illo natus reiciendis et, odio aut iure, voluptas nulla itaque doloremque, fuga nobis mollitia. Deleniti vitae quibusdam maiores, dolore debitis atque veritatis laudantium iste? Numquam corrupti eligendi minus nihil voluptatum!</span><span>Eius nemo, quaerat unde mollitia aspernatur distinctio minus repellendus voluptate iure odio esse fuga incidunt soluta obcaecati illum totam aliquam quam laborum ducimus praesentium provident, deleniti odit! Molestias, odit pariatur!</span></p>
+<p><span>Neque, cumque? Deserunt obcaecati, ut in necessitatibus voluptate modi facere nostrum dolore nulla ex eligendi tempora, dicta reprehenderit maiores porro esse non. Nisi ex quo error, velit aut nesciunt laborum.</span><span>Id, dolorum sunt esse, vel ipsa aliquam sint possimus natus autem ea dolor placeat laudantium cum quaerat ipsum! Atque similique saepe ratione nobis numquam veritatis cum rerum recusandae harum fugiat?</span></p>
+<p><span>Est perspiciatis minima iure ratione quidem, laudantium, veritatis nostrum assumenda ea sequi ut dolorem unde possimus rerum non quos et in earum quisquam quia qui voluptate impedit perferendis itaque! Accusamus.</span><span>Veritatis est nam inventore aperiam quod dolores quas, ipsa alias cupiditate rem magni modi totam amet, at praesentium ipsam unde voluptatum autem explicabo, eos repellat dignissimos tempora. Corporis, magnam consequatur.</span></p>
+<p><span>Assumenda quae rem esse itaque at, accusantium architecto, saepe reiciendis consequuntur cumque, rerum autem deserunt voluptates temporibus libero enim ullam aliquam eaque dicta! Nobis a perferendis, odio culpa tenetur delectus!</span><span>Atque blanditiis perferendis facere rerum accusamus odit praesentium iure perspiciatis commodi! Quibusdam numquam veritatis quo vero iusto repellat et, excepturi esse magni. A error sit facere tempore porro consequatur cupiditate!</span></p>
+<p><span>Nulla unde repudiandae corrupti reiciendis vitae harum voluptatem doloremque aperiam consectetur animi amet fuga ea consequuntur similique repellendus neque labore voluptas, sint explicabo. Harum itaque sequi deserunt nostrum, sapiente architecto!</span><span>Nobis pariatur excepturi ipsum dolorem fugiat debitis laboriosam fugit, consequatur architecto sit libero tempora nam temporibus eaque, facere ab cum? Maiores, itaque enim. Eaque aperiam eligendi molestias, aspernatur facilis repellat.</span></p>
+<p><span>Tenetur, explicabo rerum. Accusamus voluptate molestias quos dolores provident, libero aspernatur perferendis eaque? Laudantium cum beatae earum aspernatur sunt? Omnis quia ipsam expedita, praesentium mollitia veniam ad illo consequuntur non.</span><span>Illo, placeat non, nihil libero eos dolorem eaque eum aut quae cupiditate maxime numquam, error tempora iste. Iure natus cumque maxime temporibus, officiis ex aliquid reprehenderit dicta veritatis debitis architecto.</span></p>    </div>
+</body>
+
+</html>
