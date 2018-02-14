@@ -39,9 +39,11 @@
         <img src="../img/cellphone-300.jpg" alt="cell phone" style="width:auto;">
     </picture>
     <!-- img - using pixel density of device, src is 1x -->
-    <img src='../img/cellphone-300.jpg' srcset='../img/tablet-720.png 2x, ../img/monitor-1260.png 3x'
+    <!-- desktop = 5x; LG, Samsung = 4x -->
+    <img src='../img/cellphone-300.jpg' srcset='../img/cellphone-300.jpg 1x, ../img/tv-600.jpg 2x, ../img/tablet-720.png 3x, ../img/monitor-1260.png 4x, ../img/video-wall-1346.jpg 5x'
     />
     <!-- img - using 2014 spec with width of images, choose in srcset, format in media conditions with as many condition, last one is default-->
+      <!-- needs fixing -->
     <img src='../img/cellphone-300.jpg'  srcset='../img/tablet-720.png 720w, ../img/monitor-1260.png 1260w' sizes='(min-width: 1260px) 1260px, 100vw'
     />
     <div>
