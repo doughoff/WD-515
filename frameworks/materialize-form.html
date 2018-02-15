@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mobile Web Apps class exercise</title>
+    <meta name="description" content="Centriq Mobile Web Apps Development class exercise file">
+    <meta name="author" content="My Name">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+    <!-- -------------------------------------------- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" /></head>
+
+<body>
+    <h1>Materialize</h1>
+    <h2>Forms</h2>
+
+    <div class="card-panel">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s4">
+                        <input placeholder="Common name" d="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input placeholder="Family name" id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input placeholder="Date" id="date" type="text" class="datepicker">
+                        <label for="date">Birth date</label>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s4">
+                            <input placeholder="Home town" id="city" type="text" class="validate">
+                            <label for="city">City</label>
+                        </div>
+                        <div class="input-field col s1">
+                            <input id="state" type="text" class="validate">
+                            <label for="state">St</label>
+                        </div>
+                        <div class="input-field col s3">
+                            <input id="zip" type="text" class="validate">
+                            <label for="zip">Zip</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s8">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+            </form>
+            </div>
+
+        </div>
+</body>
+<!-- -------------------------------------------- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script>
+    console.info('jQuery is active.');
+    $('.datepicker').pickadate({
+        selectMonths: true, // Creates a dropdown to control month
+        selectYears: 15, // Creates a dropdown of 15 years to control year,
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Ok',
+        closeOnSelect: false // Close upon selecting a date,
+    });
+</script>
+
+</html>
