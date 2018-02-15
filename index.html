@@ -10,128 +10,187 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="cleartype" content="on">
 
-    <!-- Icons =====================================================================-->
-    <!-- iPad and iPad mini (with @2× display) iOS ≥ 8 -->
-    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/touch/apple-touch-icon-180x180-precomposed.png">
-    <!-- iPad 3+ (with @2× display) iOS ≥ 7 -->
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/touch/apple-touch-icon-152x152-precomposed.png">
-    <!-- iPad (with @2× display) iOS ≤ 6 -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
-    <!-- iPhone (with @2× and @3 display) iOS ≥ 7 -->
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/touch/apple-touch-icon-120x120-precomposed.png">
-    <!-- iPhone (with @2× display) iOS ≤ 6 -->
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
-    <!-- iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7 -->
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/touch/apple-touch-icon-76x76-precomposed.png">
-    <!-- iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6 -->
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
-    <!-- Android Stock Browser and non-Retina iPhone and iPod Touch -->
-    <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
-    <!-- Fallback for everything else -->
-    <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
-    <link rel="icon" sizes="128x128" href="img/touch/touch-icon-128x128.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#222222">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-
     <!-- Stylesheets =====================================================================-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-    <link rel="stylesheet" href="../css/wd-515.css">
-
-
-    <!-- JavaScript =====================================================================-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="css/wd-515.css">
     <title>WD-515 Mobile Web App Development</title>
 </head>
 
 <body>
     <h1>WD-515 Mobile Web App Development</h1>
 
-    <h2>Templates</h2>
-    <ul>
-        <li><a href="templates/template.html">Basic template</a></li>
-        <li><a href="templates/template-jquery.html">Template with jQuery</a></li>
-        <li><a href="templates/template-modernizr.html">Template with jQuery & Modernizr</a></li>
-        <li><a href="templates/template-font-awesome.html">Template with FontAwesome</a></li>
-    </ul>
-
     <h2>Browser</h2>
     <ul>
-        <li><a href="browser/dimensions.html">Dimensions</a></li>
-        <li><a href="browser/relative-font-sizes.html">Relative font sizes</a></li>
+        <li>
+            <a href="browser/height-width.html">Height and width</a>
+        </li>
+        <li>
+            <a href="browser/relative-font-sizes.html">Relative font sizes</a>
+        </li>
+        <li>
+            <a href="browser/viewport-no.html">No meta viewport</a>
+        </li>
+        <li>
+            <a href="browser/viewport-yes.1.html">Has a meta viewport</a>
+        </li>
+        <li>
+            <a href="browser/viewport-yes-no-zoom.html">Has a meta viewport, can't zoom</a>
+        </li>
+        <li>
+            <a href="browser/viewport-yes.2.html">Has a meta viewport scaled x2</a>
+        </li>
     </ul>
 
     <h2>Detection</h2>
     <ul>
-        <li><a href="detection/media-query-detection.html">Media query detection</a></li>
-        <li><a href="detection/device-modernizr.html">Device detection with Modernizr</a></li>
-        <li><a href="detection/inspect-user-agent.html">Inspect user agent</a></li>
-        <li><a href="detection/user-agent.html">User agent</a></li>
-
+        <li>
+            <a href="detection/detect-device-type1.html">Detect device type 1</a>
+        </li>
+        <li>
+            <a href="detection/detect-device-type2.html">Detect device type 2</a>
+        </li>
+        <li>
+            <a href="detection/device-modernizr.html">Device detection with Modernizr</a>
+        </li>
+        <li>
+            <a href="detection/inspect-user-agent.html">Inspect user agent</a>
+        </li>
+        <li>
+            <a href="detection/media-query-detect.html">Media query detect</a>
+        </li>
+        <li>
+            <a href="detection/media-query-detection.html">Media query detection</a>
+        </li>
+        <li>
+            <a href="detection/modernizr.html">Modernizr</a>
+        </li>
+        <li>
+            <a href="detection/user-agent.html">User agent</a>
+        </li>
     </ul>
 
-    <h2>Responsive</h2>
+    <h2>Features</h2>
     <ul>
-        <li><a href="responsive\breakpoint-worksheet.html">Breakpoint worksheet</a></li>
-        <li><a href="responsive\cropping.html">Image cropping</a></li>
-        <li><a href="responsive\cropping-center.html">Image cropping center</a></li>
-        <li><a href="responsive\cropping-hybrid.html">Image cropping-hybrid</a></li>
-        <li><a href="responsive/viewport-no.html">No meta viewport</a></li>
-        <li><a href="responsive/viewport-yes.1.html">Has a meta viewport</a></li>
-        <li><a href="responsive/viewport-yes-no-zoom.html">Has a meta viewport, can't zoom</a></li>
-        <li><a href="responsive/viewport-yes.2.html">Has a meta viewport scaled x2</a></li>
-    </ul>
-    <h2>Images</h2>
-    <ul>
-        <li><a href="responsive/picture.html">Picture, srcset, & sizes</a></li>
-    </ul>
-    <h2>Widgets</h2>
-    <ul>
-        <li><a href="widgets/navigation.html">Responsive navigation</a></li>
-        <li><a href="widgets/stacktable.html">Stacktable</a></li>
+        <li>
+            <a href="features/activity-links.html">Phone activity links</a>
+        </li>
+        <li>
+            <a href="features/emmet.html">Emmet</a>
+        </li>
     </ul>
 
     <h2>Frameworks</h2>
     <ul>
-        <li><a href="frameworks/bootstrap4.html">Twitter Bootstrap 4 Jumbotron and Grids example</a></li>
-        <li><a href="frameworks/foundation.html">Zurb Foundation 6 News/Magazine template</a></li>
-        <li><a href="frameworks/skeleton.html">Skeleton template</a></li>
+        <li>
+            <a href="frameworks/bootstrap-carousel.html">Twitter Bootstrap 4 carousel</a>
+        </li>
+        <li>
+            <a href="frameworks/bootstrap-jumbostrap.html">Twitter Bootstrap 4 Jumbotron</a>
+        </li>
+        <li>
+            <a href="frameworks/foundation.html">Zurb Foundation 6 News/Magazine template</a>
+        </li>
+        <li>
+            <a href="frameworks/materialize.html">Materialize template</a>
+        </li>
+        <li>
+            <a href="frameworks/materialize-parallax.html">Materialize parallax template</a>
+        </li>
+        <li>
+            <a href="frameworks/skeleton.html">Skeleton template</a>
+        </li>
     </ul>
 
-    <h2>APIs</h2>
+    <h2>Image control</h2>
     <ul>
-        <li><a href="apis/maps.html">Google maps</a></li>
-        <li><a href="apis/local-storage.html">Local storage</a></li>
+        <li>
+            <a href="image-control\cropping-center.html">Image cropping center</a>
+        </li>
+        <li>
+            <a href="image-control\cropping-hybrid.html">Image cropping-hybrid</a>
+        </li>
+        <li>
+            <a href="image-control\cropping.html">Image cropping</a>
+        </li>
+        <li>
+            <a href="image-control/fluid-image.html">Fluid image</a>
+        </li>
+        <li>
+            <a href="image-control/picture.html">Picture, srcset, & sizes</a>
+        </li>
+        <li>
+            <a href="image-control/svg-icons.html">SVG icons</a>
+        </li>
     </ul>
 
     <h2>Layouts</h2>
     <ul>
-        <li><a href="layouts/flexbox.html">Flexbox</a></li>
-        <li><a href="layouts/grid.html">Grid</a></li>
+        <li>
+            <a href="layouts/flexbox.html">Flexbox</a>
+        </li>
+        <li>
+            <a href="layouts/fluid-two-column.html">Fluid two column</a>
+        </li>
+        <li>
+            <a href="layouts/fluid.html">Fluid</a>
+        </li>
+        <li>
+            <a href="layouts/grid-demo.html">Grid demo</a>
+        </li>
+        <li>
+            <a href="layouts/grid.html">Grid</a>
+        </li>
+        <li>
+            <a href="layouts/min-max-width.html">Min max width</a>
+        </li>
     </ul>
 
-    <h2>Media</h2>
+    <h2>Media queries</h2>
     <ul>
-        <li><a href="media/capture.html">Media capture</a></li>
-        <li><a href="media/video.html">Video</a></li>
+        <li>
+            <a href="media-queries\breakpoint-worksheet.html">Breakpoint worksheet</a>
+        </li>
+        <li>
+            <a href="media-queries\mediaqueries.html">Media queries</a>
+        </li>
+        <li>
+            <a href="media-queries\print.html">Print</a>
+        </li>
     </ul>
 
-    <h2>Device</h2>
+    <h2>Templates</h2>
     <ul>
-        <li><a href="device/activity-links.html">Phone activity links</a></li>
+        <li>
+            <a href="templates/template-min.html">Minimal template</a>
+        </li>
+        <li>
+            <a href="templates/template-jquery.html">Template with jQuery</a>
+        </li>
     </ul>
 
     <h2>Touch</h2>
     <ul>
-        <li><a href="touch/finger-painter.html">Finger Painter</a></li>
-        <li><a href="touch/detection.html">Touch Detection</a></li>
-        <li><a href="touch/hammer-test.html">Hammer test</a></li>
-        <li><a href="touch/drag-and-drop.html">Drag and drop</a></li>
+        <li>
+            <a href="touch/detection.html">Touch Detection</a>
+        </li>
+        <li>
+            <a href="touch/drag-and-drop.html">Drag and drop</a>
+        </li>
+        <li>
+            <a href="touch/finger-painter.html">Finger Painter</a>
+        </li>
+        <li>
+            <a href="touch/hammer-test.html">Hammer test</a>
+        </li>
+    </ul>
+
+    <h2>Widgets</h2>
+    <ul>
+        <li>
+            <a href="widgets/navigation.html">Responsive navigation</a>
+        </li>
+        <li>
+            <a href="widgets/stacktable.html">Stacktable</a>
+        </li>
     </ul>
 
 </body>

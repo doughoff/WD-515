@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mobile Web Apps class exercise</title>
+    <meta name="description" content="Centriq Mobile Web Apps Development class exercise file">
+    <meta name="author" content="My Name">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="../css/wd515.css">
+</head>
+
+<body>
+    <h1>Mobile Web Apps class exercise</h1>
+    <p>Your window inner width is
+        <data id='innerwidth'>0</data>
+        and your window inner height is
+        <data id='innerheight'>0</data>. </p>
+</body>
+<script src="../js/vendor/jquery-2.1.0.min.js"></script>
+<script>
+    console.info('jQuery is active.');
+    // page specific JavaScript follows...
+    $(window).on('load resize', function () {
+        $('#innerheight').html(window.innerHeight + ' px');
+        $('#innerwidth').html(window.innerWidth + ' px');
+    });
+</script>
+
+</html>
