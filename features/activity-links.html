@@ -52,7 +52,7 @@
 <body>
     <h1>Activity links</h1>
     <p>
-        To call, tel:{phone-number}
+        <a href="tel:9133227000">Skype a person</a>To call, tel:{phone-number}
     </p>
     <p>
         To SMS, sms:{destination}?body={message}. The body might be ignored by some platforms. iOS supports HTML on the body.
@@ -64,21 +64,20 @@
     <p>To tweet with app, twitter://post?message={message}</p>
 
     <p>
-        <a href=”twitter://post?Hello”>Tweet</a>
-        Maps on Android and iOS &lt; 6, http://maps.google.com?q={query} </p>
+        <a href="twitter://post?Hello">Post a tweet "Hello"</a>
+    </p>
     <p>
-        <a href=”http://maps.google.com?q=golden+gate+bridge”>Open Map</ a>
+        <a href="skype:not_a_real_person?call">Skype a person</a>
+    </p>
+    <p>
+        <a href="http://maps.google.com?q=golden+gate+bridge">Open Google maps with query to Golden Gate Bridge</ a>
             Navigation on Android and iOS &lt; 6, http://maps.google.com?saddr={point1}&daddr={point2} </p>
     <p>
-        <a href=”http://maps.google.com?saddr=golden+gate+bridge &daddr=Pier+39”>Navigate to Pier 39</a>
+        <a href="http://maps.google.com?saddr=golden+gate+bridge&daddr=Pier+39">Navigate to Pier 39 from Golden Gate Bridge</a>
         Maps on iOS >=6, http://maps.apple.com?q={query}
     </p>
     <p>
-        <a href=”http://maps.apple.com?q=golden+gate+bridge”>Open Map</a>
-        Navigation on iOS >= 6, http://maps.apple.com?saddr={point1} &daddr={point2}
-    </p>
-    <p>
-        <a href=”http://maps.apple.com?saddr=golden+gate+bridge &daddr=Pier+39”>Navigate to Pier 39</a>
+        <a href="http://maps.apple.com?saddr=golden+gate+bridge&daddr=Pier+39">Navigate to Pier 39</a>
     </p>
 
 
